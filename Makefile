@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+         #
+#    By: nephilister <nephilister@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/21 12:30:03 by cjoanne           #+#    #+#              #
-#    Updated: 2021/05/28 03:56:01 by cjoanne          ###   ########.fr        #
+#    Updated: 2021/08/16 22:41:30 by nephilister      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,8 @@ NAME =	so_long
 SRCS_LIST	=	error.c\
 				main.c\
 				validation.c\
-				free.c
+				free.c\
+				window.c
 SRCS_DIR	=	srcs/
 SRCS		=	$(addprefix $(SRCS_DIR), $(SRCS_LIST))
 
@@ -26,6 +27,9 @@ OBJS		=	$(addprefix $(OBJS_DIR), $(OBJS_LIST))
 
 CC 			=	gcc
 CFLAGS		=	-Wall -Wextra -Werror
+
+MLX_LINKER	=	-framework OpenGL -framework AppKit -lmlx
+
 
 INCLUDES	=	-I$(LIBFT_HEADER) -I$(HEADERS_DIR)
 
@@ -51,7 +55,7 @@ LIBA = libft.a
 all : $(NAME)
 
 $(NAME) : $(LIBFT) $(OBJS_DIR) $(OBJS)
-	@$(CC) $(LIBFT) $(LIBRARIES) $(INCLUDES) $(OBJS) -o $(NAME)
+	@$(CC) $(LIBFT) $(LIBRARIES) $(MLX_LINKER) $(INCLUDES) $(OBJS) libmlx.dylib -o $(NAME)
 	@echo "\n$(NAME): $(BLUE)$(NAME) object files were created$(RESET)"
 	@echo "$(NAME): $(GREEN)$(NAME) was created$(RESET)"
 
