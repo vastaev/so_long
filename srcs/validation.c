@@ -12,6 +12,8 @@ static void	legend_validation(int argc, char *argv[], t_infoVars *data)
 	data->numNL = 0;
 	data->legC = 0;
 	mapFd = open(argv[argc - 1], O_RDONLY);
+	if (mapFd == -1)
+		errno_exit();
 	while (read(mapFd, buf, 1) != 0)
 	{
 		buf[1] = '\0';
@@ -43,7 +45,7 @@ static void	rectangle_map_check(t_infoVars *data)
 	}
 }
 
-void	map_walls_check(t_infoVars *data)
+static void	map_walls_check(t_infoVars *data)
 {
 	int	i;
 	int	lineLen;
@@ -52,19 +54,19 @@ void	map_walls_check(t_infoVars *data)
 	i = 0;
 	while (data->map[0][i] != '\0')
 		if (data->map[0][i++] != '1')
-			error_free_matrix("Wrong map format(hole in twall)", data->map);
+			error_free_matrix("Wrong map format(hole in tWall)", data->map);
 	i = 0;
 	while (data->map[data->numNL][i] != '\0')
 		if (data->map[data->numNL][i++] != '1')
-			error_free_matrix("Wrong map format(hole in bwall)", data->map);
+			error_free_matrix("Wrong map format(hole in bWall)", data->map);
 	i = 1;
 	while (i < data->numNL)
 		if (data->map[i++][0] != '1')
-			error_free_matrix("Wrong map format(hole in lwall)", data->map);
+			error_free_matrix("Wrong map format(hole in lWall)", data->map);
 	i = 1;
 	while (i < data->numNL)
 		if (data->map[i++][lineLen] != '1')
-			error_free_matrix("Wrong map format(hole in rwall)", data->map);
+			error_free_matrix("Wrong map format(hole in rWall)", data->map);
 }
 
 void	map_validation(int argc, char *argv[], t_infoVars *data)
@@ -82,12 +84,12 @@ void	map_validation(int argc, char *argv[], t_infoVars *data)
 		error_exit("Wrong map name");
 	if (ft_strcmp(argv[mapInd] + mapNameLen - 4, ".ber") != 0)
 		error_exit("Wrong extension");
-	i = 0;
+	legend_validation(argc, argv, data);
 	mapFd = open(argv[mapInd], O_RDONLY);
 	if (mapFd == -1)
 		errno_exit();
-	legend_validation(argc, argv, data);
 	data->map = (char **)malloc(sizeof(data->map) * (data->numNL + 1));
+	i = 0;
 	while (get_next_line(mapFd, &data->map[i]))
 		i++;
 	rectangle_map_check(data);
