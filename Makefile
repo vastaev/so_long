@@ -6,32 +6,28 @@
 #    By: nephilister <nephilister@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/21 12:30:03 by cjoanne           #+#    #+#              #
-#    Updated: 2021/08/16 22:41:30 by nephilister      ###   ########.fr        #
+#    Updated: 2021/08/17 22:35:55 by nephilister      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =	so_long
 
-SRCS_LIST	=	error.c\
-				main.c\
-				validation.c\
-				free.c\
-				window.c
+SRCS_LIST	=	main.c\
+				window.c\
+				image.c\
+				hooks.c\
+				color.c
 SRCS_DIR	=	srcs/
 SRCS		=	$(addprefix $(SRCS_DIR), $(SRCS_LIST))
 
-OBJS_LIST	=	$(patsubst %.c, %.o, $(SRCS_LIST))
-
+OBJS_LIST	=	$(SRCS_LIST:.c=.o)
 OBJS_DIR	=	objects/
 OBJS		=	$(addprefix $(OBJS_DIR), $(OBJS_LIST))
 
 CC 			=	gcc
 CFLAGS		=	-Wall -Wextra -Werror
 
-MLX_LINKER	=	-framework OpenGL -framework AppKit -lmlx
-
-
-INCLUDES	=	-I$(LIBFT_HEADER) -I$(HEADERS_DIR)
+INCLUDES	=	-I$(LIBFT_HEADER) -I$(HEADERS_DIR) -I$(MINILIBX_HEADERS)
 
 LIBFT_DIR		=	./libs/libft/
 LIBFT_HEADER 	=	$(LIBFT_DIR)includes/
@@ -41,7 +37,13 @@ HEADERS_DIR		=	./includes/
 HEADERS_LIST	=	so_long.h
 HEADERS 		=	$(addprefix $(HEADERS_DIR), $(HEADERS_LIST))
 
-LIBRARIES = -lft -L$(LIBFT_DIR)
+MINILIBX = $(MINILIBX_DIR)libmlx.a
+MINILIBX_DIR = ./minilibx_macos/
+MINILIBX_HEADERS = $(MINILIBX_DIR)
+
+LIBRARIES = -lmlx -lft\
+		 -L$(LIBFT_DIR) -L$(MINILIBX_DIR)\
+		 -framework OpenGL -framework AppKit
 
 RM	=	rm -rf
 
@@ -55,7 +57,7 @@ LIBA = libft.a
 all : $(NAME)
 
 $(NAME) : $(LIBFT) $(OBJS_DIR) $(OBJS)
-	@$(CC) $(LIBFT) $(LIBRARIES) $(MLX_LINKER) $(INCLUDES) $(OBJS) libmlx.dylib -o $(NAME)
+	@$(CC) $(OBJS) $(LIBRARIES) $(INCLUDES) ./minilibx_macos/libmlx.dylib -o $(NAME)
 	@echo "\n$(NAME): $(BLUE)$(NAME) object files were created$(RESET)"
 	@echo "$(NAME): $(GREEN)$(NAME) was created$(RESET)"
 
