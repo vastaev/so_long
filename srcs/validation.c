@@ -37,7 +37,7 @@ static void	rectangle_map_check(t_infoVars *data)
 
 	i = 1;
 	firstLineLen = (int)ft_strlen(data->map[0]);
-	while (data->map[i] != NULL)
+	while (i <= data->numNL)
 	{
 		if (ft_strlen(data->map[i]) != firstLineLen)
 			error_exit("Not rectangle");

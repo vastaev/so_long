@@ -6,7 +6,7 @@
 #    By: nephilister <nephilister@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/21 12:30:03 by cjoanne           #+#    #+#              #
-#    Updated: 2021/08/18 05:13:44 by nephilister      ###   ########.fr        #
+#    Updated: 2021/08/18 10:03:02 by nephilister      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,10 +16,14 @@ SRCS_LIST	=	main.c\
 				error.c\
 				free.c\
 				validation.c\
-				window.c\
 				image.c\
 				hooks.c\
-				game_start.c
+				game_start.c\
+				end_game.c\
+				update.c\
+				drawing.c\
+				open_images.c\
+				input.c
 SRCS_DIR	=	srcs/
 SRCS		=	$(addprefix $(SRCS_DIR), $(SRCS_LIST))
 

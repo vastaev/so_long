@@ -9,6 +9,7 @@
 # include <sys/errno.h>
 # include "libft.h"
 # include "mlx.h"
+# include <stdbool.h>
 
 # ifndef ANIMATION_FRAMES
 #  define ANIMATION_FRAMES 10
@@ -49,10 +50,18 @@ typedef enum e_celltype
 	ENEMY = 'V',
 }	t_celltype;
 
+enum e_keycode
+{
+	KEY_UP = 13,
+	KEY_DOWN = 1,
+	KEY_LEFT = 0,
+	KEY_RIGHT = 2,
+	ESC = 53
+};
+
 typedef struct	s_cell
 {
 	t_celltype		type;
-	t_celltype		orgType;
 	t_vector		position;
 	struct s_cell	*up;
 	struct s_cell	*down;
@@ -62,13 +71,13 @@ typedef struct	s_cell
 
 typedef struct s_player
 {
-	t_cell	*tile;
+	t_cell	*cell;
 	void	*current_img;
 }				t_player;
 
 typedef struct	s_wall_img
 {
-	void	*block;
+	void	*wall;
 }				t_wall_img;
 
 typedef struct s_game
@@ -82,7 +91,7 @@ typedef struct s_game
 	int				collects;
 	int				moves;
 	// t_enemy			*enemy_list;
-	// t_vector		img_size;
+	t_vector		img_size;
 	t_wall_img		wall_imgs;
 	// t_collect_img	collects_imgs;
 	// t_enemy_img		enemy_imgs;
@@ -91,17 +100,23 @@ typedef struct s_game
 
 void		errno_exit(void);
 void		error_exit(char *error);
+
+void		free_cellmap(t_game *game);
 void		error_free_matrix(char *error, char **matrix);
 
 void		map_validation(int argc, char *argv[], t_infoVars *data);
 
 t_image 	ft_new_sprite(void *mlx, char *path);
 
-int	ft_input(int key, void *param);
 // int	ft_update (t_long *program);
 int	ft_close(void);
 
-void	start_game(t_infoVars data);
+void	start_game(t_infoVars data, t_game *game);
+int		end_program(t_game *game);
+void	open_images(t_game *game);
+void	graphics(t_game game);
+int		ft_update(t_game *game);
+int		ft_input(int key, t_game *game);
 
 
 // t_color	new_color(int r, int g, int b, int a);
