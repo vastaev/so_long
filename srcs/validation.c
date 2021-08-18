@@ -40,7 +40,7 @@ static void	rectangle_map_check(t_infoVars *data)
 	while (data->map[i] != NULL)
 	{
 		if (ft_strlen(data->map[i]) != firstLineLen)
-			error_free_matrix("Wrong map format(not rectangle)", data->map);
+			error_exit("Not rectangle");
 		i++;
 	}
 }

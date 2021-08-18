@@ -6,17 +6,20 @@
 #    By: nephilister <nephilister@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/21 12:30:03 by cjoanne           #+#    #+#              #
-#    Updated: 2021/08/17 22:35:55 by nephilister      ###   ########.fr        #
+#    Updated: 2021/08/18 05:13:44 by nephilister      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =	so_long
 
 SRCS_LIST	=	main.c\
+				error.c\
+				free.c\
+				validation.c\
 				window.c\
 				image.c\
 				hooks.c\
-				color.c
+				game_start.c
 SRCS_DIR	=	srcs/
 SRCS		=	$(addprefix $(SRCS_DIR), $(SRCS_LIST))
 
@@ -38,7 +41,7 @@ HEADERS_LIST	=	so_long.h
 HEADERS 		=	$(addprefix $(HEADERS_DIR), $(HEADERS_LIST))
 
 MINILIBX = $(MINILIBX_DIR)libmlx.a
-MINILIBX_DIR = ./minilibx_macos/
+MINILIBX_DIR = ./libs/minilibx_macos/
 MINILIBX_HEADERS = $(MINILIBX_DIR)
 
 LIBRARIES = -lmlx -lft\
@@ -57,14 +60,13 @@ LIBA = libft.a
 all : $(NAME)
 
 $(NAME) : $(LIBFT) $(OBJS_DIR) $(OBJS)
-	@$(CC) $(OBJS) $(LIBRARIES) $(INCLUDES) ./minilibx_macos/libmlx.dylib -o $(NAME)
-	@echo "\n$(NAME): $(BLUE)$(NAME) object files were created$(RESET)"
+	@$(CC) $(OBJS) $(LIBRARIES) $(INCLUDES) -o $(NAME)
+	@echo "$(NAME): $(BLUE)$(NAME) object files were created$(RESET)"
 	@echo "$(NAME): $(GREEN)$(NAME) was created$(RESET)"
 
 $(OBJS_DIR)%.o : $(SRCS_DIR)%.c
 	@$(CC) $(СFLAGS) $(INCLUDES) -c $< -o $@
-	@echo "$(BLUE)`ruby -e "puts (0..1).to_a.shuffle.join('')"`$(RESET)\c"
-
+	
 $(OBJS_DIR) :
 	@mkdir -p $(OBJS_DIR)
 	@echo "$(NAME): $(BLUE)creating $(NAME)$(RESET)"
