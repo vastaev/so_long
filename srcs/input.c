@@ -1,6 +1,6 @@
 #include "so_long.h"
 
-void move_to_empty(t_game *game, t_cell *cell)
+void	move_to_empty(t_game *game, t_cell *cell)
 {
 	cell->type = PLAYER;
 	if (game->player.cell->type != EXIT)
@@ -8,12 +8,28 @@ void move_to_empty(t_game *game, t_cell *cell)
 	game->player.cell = cell;
 }
 
+void	move_to_collectable(t_game *game, t_cell *cell)
+{
+	cell->type = PLAYER;
+	game->player.cell->type = EMPTY;
+	game->player.cell = cell;
+	game->collects--;
+}
 
+void	move_to_exit(t_game *game, t_cell *cell)
+{
+	printf("VICTORY!\n");
+	end_program(game);
+}
 
 bool	move_to(t_game *game, t_cell *cell)
 {
 	if (cell->type == EMPTY)
 		move_to_empty(game, cell);
+	else if (cell->type == COLLECTABLE)
+		move_to_collectable(game, cell);
+	else if (cell->type == EXIT && game->collects == 0)
+		move_to_exit(game, cell);
 	else
 		return (false);
 	return (true);

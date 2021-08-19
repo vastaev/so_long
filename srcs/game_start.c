@@ -9,7 +9,7 @@ t_cell **memalloc_cellmap(t_infoVars data, t_cell **cellmap)
 	cellmap = malloc(sizeof(t_cell *) * data.numNL + 1);
 	if (cellmap == NULL)
 		error_free_matrix("Malloc error when making cellmap", data.map);
-	lineLen = ft_strlen(data.map[0]);
+	lineLen = (int)ft_strlen(data.map[0]);
 	while (i <= data.numNL)
 	{
 		cellmap[i] = malloc(sizeof(t_cell) * lineLen);
@@ -52,7 +52,7 @@ void	setup_cell(t_cell **cellmap, int x, int y)
 	cellmap[y][x].right = &cellmap[y][x + 1];
 }
 
-void	set_game_vars(t_cell *cell, t_game *game, char leg)
+void	set_game_vars(t_cell *cell, t_game *game)
 {
 	if (cell->type == PLAYER)
 		game->player.cell = cell;
@@ -64,6 +64,7 @@ t_cell **make_cellmap(t_infoVars data, t_game *game)
 	int		y;
 	t_cell	**cellmap;
 
+	cellmap = NULL;
 	cellmap = memalloc_cellmap(data, cellmap);
 	y = 0;
 	while (y <= data.numNL)
@@ -73,7 +74,7 @@ t_cell **make_cellmap(t_infoVars data, t_game *game)
 		{
 			cellmap[y][x].type = get_type(data.map[y][x]);
 			setup_cell(cellmap, x, y);
-			set_game_vars(&cellmap[y][x], game, data.map[y][x]);
+			set_game_vars(&cellmap[y][x], game);
 			x++;
 		}
 		cellmap[y][x].type = 0;
@@ -92,15 +93,15 @@ void	game_init(t_game *game)
 			game->wndw_size.x + IMG_SIZE / 2,
 			game->wndw_size.y,
 			"soooo_long");
-	mlx_hook(game->window, 17, 0, end_program, game);
+	mlx_hook(game->window, 17, 0, end_program, (void *)game);
 	open_images(game);
 }
 
 void	start_game(t_infoVars data, t_game *game)
 {
-	t_cell	**cellmap;
-
+	game->moves = 0;
 	game->collects = data.legC;
+	printf("%i", game->collects);
 	game->cellmap = make_cellmap(data, game);
 	game_init(game);
 }

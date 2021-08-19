@@ -4,7 +4,7 @@
 # compile C with /Library/Developer/CommandLineTools/usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/nephilister/CLionProjects/so_long/libs/libft/includes -I/Users/nephilister/CLionProjects/so_long/includes
+C_INCLUDES = -I/Users/nephilister/prjcs/newloong/libs/libft/includes -I/Users/nephilister/prjcs/newloong/libs/minilibx_macos -I/Users/nephilister/prjcs/newloong/includes
 
 C_FLAGSarm64 = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -std=gnu99
 

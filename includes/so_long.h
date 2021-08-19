@@ -11,11 +11,7 @@
 # include "mlx.h"
 # include <stdbool.h>
 
-# ifndef ANIMATION_FRAMES
-#  define ANIMATION_FRAMES 10
-# endif
-
-# define IMG_SIZE 64
+# define IMG_SIZE 50
 
 typedef struct s_infoVars
 {
@@ -30,7 +26,6 @@ typedef struct	s_vector
 	int	y;
 }				t_vector;
 
-/* all info needed for an image */
 typedef struct	s_image {
 	void		*reference;
 	t_vector	size;
@@ -80,6 +75,11 @@ typedef struct	s_wall_img
 	void	*wall;
 }				t_wall_img;
 
+typedef struct	s_collectable_img
+{
+	void	*current_img;
+}	t_collect_img;
+
 typedef struct s_game
 {
 	void			*mlx;
@@ -90,11 +90,11 @@ typedef struct s_game
 	int				og_collects;
 	int				collects;
 	int				moves;
-	// t_enemy			*enemy_list;
 	t_vector		img_size;
 	t_wall_img		wall_imgs;
-	// t_collect_img	collects_imgs;
-	// t_enemy_img		enemy_imgs;
+	t_collect_img	collects_imgs;
+	void			*empty_img;
+	void			*exit_img;
 }	t_game;
 
 
@@ -108,19 +108,12 @@ void		map_validation(int argc, char *argv[], t_infoVars *data);
 
 t_image 	ft_new_sprite(void *mlx, char *path);
 
-// int	ft_update (t_long *program);
-int	ft_close(void);
-
 void	start_game(t_infoVars data, t_game *game);
 int		end_program(t_game *game);
 void	open_images(t_game *game);
 void	graphics(t_game game);
 int		ft_update(t_game *game);
 int		ft_input(int key, t_game *game);
-
-
-// t_color	new_color(int r, int g, int b, int a);
-// void	turn_pixel_to_color(char *pixel, t_color color);
-// void	turn_img_to_color(t_image *image, t_color color);
+void	open_exit_img(t_game *game);
 
 #endif

@@ -1,3 +1,3 @@
-/Users/nephilister/CLionProjects/so_long/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/nephilister/CLionProjects/so_long/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/nephilister/CLionProjects/so_long/cmake-build-debug/CMakeFiles/so_long.dir
+/Users/nephilister/prjcs/newloong/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/nephilister/prjcs/newloong/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/nephilister/prjcs/newloong/cmake-build-debug/CMakeFiles/so_long.dir

@@ -57,10 +57,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/nephilister/CLionProjects/so_long
+CMAKE_SOURCE_DIR = /Users/nephilister/prjcs/newloong
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/nephilister/CLionProjects/so_long/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/nephilister/prjcs/newloong/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nephilister/CLionProjects/so_long/cmake-build-debug/CMakeFiles /Users/nephilister/CLionProjects/so_long/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nephilister/prjcs/newloong/cmake-build-debug/CMakeFiles /Users/nephilister/prjcs/newloong/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nephilister/CLionProjects/so_long/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nephilister/prjcs/newloong/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1329,6 +1329,54 @@ libs/libft/srcs/get_next_line_utils.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/libs/libft/srcs/get_next_line_utils.c.s
 .PHONY : libs/libft/srcs/get_next_line_utils.c.s
 
+srcs/drawing.o: srcs/drawing.c.o
+.PHONY : srcs/drawing.o
+
+# target to build an object file
+srcs/drawing.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/drawing.c.o
+.PHONY : srcs/drawing.c.o
+
+srcs/drawing.i: srcs/drawing.c.i
+.PHONY : srcs/drawing.i
+
+# target to preprocess a source file
+srcs/drawing.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/drawing.c.i
+.PHONY : srcs/drawing.c.i
+
+srcs/drawing.s: srcs/drawing.c.s
+.PHONY : srcs/drawing.s
+
+# target to generate assembly for a file
+srcs/drawing.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/drawing.c.s
+.PHONY : srcs/drawing.c.s
+
+srcs/end_game.o: srcs/end_game.c.o
+.PHONY : srcs/end_game.o
+
+# target to build an object file
+srcs/end_game.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/end_game.c.o
+.PHONY : srcs/end_game.c.o
+
+srcs/end_game.i: srcs/end_game.c.i
+.PHONY : srcs/end_game.i
+
+# target to preprocess a source file
+srcs/end_game.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/end_game.c.i
+.PHONY : srcs/end_game.c.i
+
+srcs/end_game.s: srcs/end_game.c.s
+.PHONY : srcs/end_game.s
+
+# target to generate assembly for a file
+srcs/end_game.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/end_game.c.s
+.PHONY : srcs/end_game.c.s
+
 srcs/error.o: srcs/error.c.o
 .PHONY : srcs/error.o
 
@@ -1377,6 +1425,54 @@ srcs/free.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/free.c.s
 .PHONY : srcs/free.c.s
 
+srcs/game_start.o: srcs/game_start.c.o
+.PHONY : srcs/game_start.o
+
+# target to build an object file
+srcs/game_start.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/game_start.c.o
+.PHONY : srcs/game_start.c.o
+
+srcs/game_start.i: srcs/game_start.c.i
+.PHONY : srcs/game_start.i
+
+# target to preprocess a source file
+srcs/game_start.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/game_start.c.i
+.PHONY : srcs/game_start.c.i
+
+srcs/game_start.s: srcs/game_start.c.s
+.PHONY : srcs/game_start.s
+
+# target to generate assembly for a file
+srcs/game_start.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/game_start.c.s
+.PHONY : srcs/game_start.c.s
+
+srcs/input.o: srcs/input.c.o
+.PHONY : srcs/input.o
+
+# target to build an object file
+srcs/input.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/input.c.o
+.PHONY : srcs/input.c.o
+
+srcs/input.i: srcs/input.c.i
+.PHONY : srcs/input.i
+
+# target to preprocess a source file
+srcs/input.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/input.c.i
+.PHONY : srcs/input.c.i
+
+srcs/input.s: srcs/input.c.s
+.PHONY : srcs/input.s
+
+# target to generate assembly for a file
+srcs/input.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/input.c.s
+.PHONY : srcs/input.c.s
+
 srcs/main.o: srcs/main.c.o
 .PHONY : srcs/main.o
 
@@ -1400,6 +1496,102 @@ srcs/main.s: srcs/main.c.s
 srcs/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/main.c.s
 .PHONY : srcs/main.c.s
+
+srcs/more_open_images.o: srcs/more_open_images.c.o
+.PHONY : srcs/more_open_images.o
+
+# target to build an object file
+srcs/more_open_images.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/more_open_images.c.o
+.PHONY : srcs/more_open_images.c.o
+
+srcs/more_open_images.i: srcs/more_open_images.c.i
+.PHONY : srcs/more_open_images.i
+
+# target to preprocess a source file
+srcs/more_open_images.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/more_open_images.c.i
+.PHONY : srcs/more_open_images.c.i
+
+srcs/more_open_images.s: srcs/more_open_images.c.s
+.PHONY : srcs/more_open_images.s
+
+# target to generate assembly for a file
+srcs/more_open_images.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/more_open_images.c.s
+.PHONY : srcs/more_open_images.c.s
+
+srcs/movement.o: srcs/movement.c.o
+.PHONY : srcs/movement.o
+
+# target to build an object file
+srcs/movement.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/movement.c.o
+.PHONY : srcs/movement.c.o
+
+srcs/movement.i: srcs/movement.c.i
+.PHONY : srcs/movement.i
+
+# target to preprocess a source file
+srcs/movement.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/movement.c.i
+.PHONY : srcs/movement.c.i
+
+srcs/movement.s: srcs/movement.c.s
+.PHONY : srcs/movement.s
+
+# target to generate assembly for a file
+srcs/movement.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/movement.c.s
+.PHONY : srcs/movement.c.s
+
+srcs/open_images.o: srcs/open_images.c.o
+.PHONY : srcs/open_images.o
+
+# target to build an object file
+srcs/open_images.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/open_images.c.o
+.PHONY : srcs/open_images.c.o
+
+srcs/open_images.i: srcs/open_images.c.i
+.PHONY : srcs/open_images.i
+
+# target to preprocess a source file
+srcs/open_images.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/open_images.c.i
+.PHONY : srcs/open_images.c.i
+
+srcs/open_images.s: srcs/open_images.c.s
+.PHONY : srcs/open_images.s
+
+# target to generate assembly for a file
+srcs/open_images.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/open_images.c.s
+.PHONY : srcs/open_images.c.s
+
+srcs/update.o: srcs/update.c.o
+.PHONY : srcs/update.o
+
+# target to build an object file
+srcs/update.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/update.c.o
+.PHONY : srcs/update.c.o
+
+srcs/update.i: srcs/update.c.i
+.PHONY : srcs/update.i
+
+# target to preprocess a source file
+srcs/update.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/update.c.i
+.PHONY : srcs/update.c.i
+
+srcs/update.s: srcs/update.c.s
+.PHONY : srcs/update.s
+
+# target to generate assembly for a file
+srcs/update.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/update.c.s
+.PHONY : srcs/update.c.s
 
 srcs/validation.o: srcs/validation.c.o
 .PHONY : srcs/validation.o
@@ -1584,15 +1776,39 @@ help:
 	@echo "... libs/libft/srcs/get_next_line_utils.o"
 	@echo "... libs/libft/srcs/get_next_line_utils.i"
 	@echo "... libs/libft/srcs/get_next_line_utils.s"
+	@echo "... srcs/drawing.o"
+	@echo "... srcs/drawing.i"
+	@echo "... srcs/drawing.s"
+	@echo "... srcs/end_game.o"
+	@echo "... srcs/end_game.i"
+	@echo "... srcs/end_game.s"
 	@echo "... srcs/error.o"
 	@echo "... srcs/error.i"
 	@echo "... srcs/error.s"
 	@echo "... srcs/free.o"
 	@echo "... srcs/free.i"
 	@echo "... srcs/free.s"
+	@echo "... srcs/game_start.o"
+	@echo "... srcs/game_start.i"
+	@echo "... srcs/game_start.s"
+	@echo "... srcs/input.o"
+	@echo "... srcs/input.i"
+	@echo "... srcs/input.s"
 	@echo "... srcs/main.o"
 	@echo "... srcs/main.i"
 	@echo "... srcs/main.s"
+	@echo "... srcs/more_open_images.o"
+	@echo "... srcs/more_open_images.i"
+	@echo "... srcs/more_open_images.s"
+	@echo "... srcs/movement.o"
+	@echo "... srcs/movement.i"
+	@echo "... srcs/movement.s"
+	@echo "... srcs/open_images.o"
+	@echo "... srcs/open_images.i"
+	@echo "... srcs/open_images.s"
+	@echo "... srcs/update.o"
+	@echo "... srcs/update.i"
+	@echo "... srcs/update.s"
 	@echo "... srcs/validation.o"
 	@echo "... srcs/validation.i"
 	@echo "... srcs/validation.s"
