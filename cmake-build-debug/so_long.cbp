@@ -237,6 +237,21 @@
 		<Unit filename="/Users/nephilister/prjcs/newloong/libs/libft/srcs/get_next_line_utils.c">
 			<Option target="so_long"/>
 		</Unit>
+		<Unit filename="/Users/nephilister/prjcs/newloong/libs/minilibx_macos/font.c">
+			<Option target="so_long"/>
+		</Unit>
+		<Unit filename="/Users/nephilister/prjcs/newloong/libs/minilibx_macos/mlx_png.c">
+			<Option target="so_long"/>
+		</Unit>
+		<Unit filename="/Users/nephilister/prjcs/newloong/libs/minilibx_macos/mlx_rgb.c">
+			<Option target="so_long"/>
+		</Unit>
+		<Unit filename="/Users/nephilister/prjcs/newloong/libs/minilibx_macos/mlx_string_put.c">
+			<Option target="so_long"/>
+		</Unit>
+		<Unit filename="/Users/nephilister/prjcs/newloong/libs/minilibx_macos/mlx_xpm.c">
+			<Option target="so_long"/>
+		</Unit>
 		<Unit filename="/Users/nephilister/prjcs/newloong/srcs/drawing.c">
 			<Option target="so_long"/>
 		</Unit>
@@ -259,9 +274,6 @@
 			<Option target="so_long"/>
 		</Unit>
 		<Unit filename="/Users/nephilister/prjcs/newloong/srcs/more_open_images.c">
-			<Option target="so_long"/>
-		</Unit>
-		<Unit filename="/Users/nephilister/prjcs/newloong/srcs/movement.c">
 			<Option target="so_long"/>
 		</Unit>
 		<Unit filename="/Users/nephilister/prjcs/newloong/srcs/open_images.c">

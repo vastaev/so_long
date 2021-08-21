@@ -833,22 +833,9 @@ CMakeFiles/so_long.dir/srcs/more_open_images.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/so_long.dir/srcs/more_open_images.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nephilister/prjcs/newloong/srcs/more_open_images.c -o CMakeFiles/so_long.dir/srcs/more_open_images.c.s
 
-CMakeFiles/so_long.dir/srcs/movement.c.o: CMakeFiles/so_long.dir/flags.make
-CMakeFiles/so_long.dir/srcs/movement.c.o: ../srcs/movement.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nephilister/prjcs/newloong/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/so_long.dir/srcs/movement.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/so_long.dir/srcs/movement.c.o -c /Users/nephilister/prjcs/newloong/srcs/movement.c
-
-CMakeFiles/so_long.dir/srcs/movement.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/so_long.dir/srcs/movement.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nephilister/prjcs/newloong/srcs/movement.c > CMakeFiles/so_long.dir/srcs/movement.c.i
-
-CMakeFiles/so_long.dir/srcs/movement.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/so_long.dir/srcs/movement.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nephilister/prjcs/newloong/srcs/movement.c -o CMakeFiles/so_long.dir/srcs/movement.c.s
-
 CMakeFiles/so_long.dir/srcs/open_images.c.o: CMakeFiles/so_long.dir/flags.make
 CMakeFiles/so_long.dir/srcs/open_images.c.o: ../srcs/open_images.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nephilister/prjcs/newloong/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/so_long.dir/srcs/open_images.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nephilister/prjcs/newloong/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/so_long.dir/srcs/open_images.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/so_long.dir/srcs/open_images.c.o -c /Users/nephilister/prjcs/newloong/srcs/open_images.c
 
 CMakeFiles/so_long.dir/srcs/open_images.c.i: cmake_force
@@ -861,7 +848,7 @@ CMakeFiles/so_long.dir/srcs/open_images.c.s: cmake_force
 
 CMakeFiles/so_long.dir/srcs/update.c.o: CMakeFiles/so_long.dir/flags.make
 CMakeFiles/so_long.dir/srcs/update.c.o: ../srcs/update.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nephilister/prjcs/newloong/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/so_long.dir/srcs/update.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nephilister/prjcs/newloong/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/so_long.dir/srcs/update.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/so_long.dir/srcs/update.c.o -c /Users/nephilister/prjcs/newloong/srcs/update.c
 
 CMakeFiles/so_long.dir/srcs/update.c.i: cmake_force
@@ -871,6 +858,71 @@ CMakeFiles/so_long.dir/srcs/update.c.i: cmake_force
 CMakeFiles/so_long.dir/srcs/update.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/so_long.dir/srcs/update.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nephilister/prjcs/newloong/srcs/update.c -o CMakeFiles/so_long.dir/srcs/update.c.s
+
+CMakeFiles/so_long.dir/libs/minilibx_macos/font.c.o: CMakeFiles/so_long.dir/flags.make
+CMakeFiles/so_long.dir/libs/minilibx_macos/font.c.o: ../libs/minilibx_macos/font.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nephilister/prjcs/newloong/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/so_long.dir/libs/minilibx_macos/font.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/so_long.dir/libs/minilibx_macos/font.c.o -c /Users/nephilister/prjcs/newloong/libs/minilibx_macos/font.c
+
+CMakeFiles/so_long.dir/libs/minilibx_macos/font.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/so_long.dir/libs/minilibx_macos/font.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nephilister/prjcs/newloong/libs/minilibx_macos/font.c > CMakeFiles/so_long.dir/libs/minilibx_macos/font.c.i
+
+CMakeFiles/so_long.dir/libs/minilibx_macos/font.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/so_long.dir/libs/minilibx_macos/font.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nephilister/prjcs/newloong/libs/minilibx_macos/font.c -o CMakeFiles/so_long.dir/libs/minilibx_macos/font.c.s
+
+CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_png.c.o: CMakeFiles/so_long.dir/flags.make
+CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_png.c.o: ../libs/minilibx_macos/mlx_png.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nephilister/prjcs/newloong/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_png.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_png.c.o -c /Users/nephilister/prjcs/newloong/libs/minilibx_macos/mlx_png.c
+
+CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_png.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_png.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nephilister/prjcs/newloong/libs/minilibx_macos/mlx_png.c > CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_png.c.i
+
+CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_png.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_png.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nephilister/prjcs/newloong/libs/minilibx_macos/mlx_png.c -o CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_png.c.s
+
+CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_rgb.c.o: CMakeFiles/so_long.dir/flags.make
+CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_rgb.c.o: ../libs/minilibx_macos/mlx_rgb.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nephilister/prjcs/newloong/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_rgb.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_rgb.c.o -c /Users/nephilister/prjcs/newloong/libs/minilibx_macos/mlx_rgb.c
+
+CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_rgb.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_rgb.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nephilister/prjcs/newloong/libs/minilibx_macos/mlx_rgb.c > CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_rgb.c.i
+
+CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_rgb.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_rgb.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nephilister/prjcs/newloong/libs/minilibx_macos/mlx_rgb.c -o CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_rgb.c.s
+
+CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_string_put.c.o: CMakeFiles/so_long.dir/flags.make
+CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_string_put.c.o: ../libs/minilibx_macos/mlx_string_put.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nephilister/prjcs/newloong/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_string_put.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_string_put.c.o -c /Users/nephilister/prjcs/newloong/libs/minilibx_macos/mlx_string_put.c
+
+CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_string_put.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_string_put.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nephilister/prjcs/newloong/libs/minilibx_macos/mlx_string_put.c > CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_string_put.c.i
+
+CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_string_put.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_string_put.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nephilister/prjcs/newloong/libs/minilibx_macos/mlx_string_put.c -o CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_string_put.c.s
+
+CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_xpm.c.o: CMakeFiles/so_long.dir/flags.make
+CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_xpm.c.o: ../libs/minilibx_macos/mlx_xpm.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nephilister/prjcs/newloong/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_xpm.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_xpm.c.o -c /Users/nephilister/prjcs/newloong/libs/minilibx_macos/mlx_xpm.c
+
+CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_xpm.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_xpm.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nephilister/prjcs/newloong/libs/minilibx_macos/mlx_xpm.c > CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_xpm.c.i
+
+CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_xpm.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_xpm.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nephilister/prjcs/newloong/libs/minilibx_macos/mlx_xpm.c -o CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_xpm.c.s
 
 # Object files for target so_long
 so_long_OBJECTS = \
@@ -933,9 +985,13 @@ so_long_OBJECTS = \
 "CMakeFiles/so_long.dir/srcs/game_start.c.o" \
 "CMakeFiles/so_long.dir/srcs/input.c.o" \
 "CMakeFiles/so_long.dir/srcs/more_open_images.c.o" \
-"CMakeFiles/so_long.dir/srcs/movement.c.o" \
 "CMakeFiles/so_long.dir/srcs/open_images.c.o" \
-"CMakeFiles/so_long.dir/srcs/update.c.o"
+"CMakeFiles/so_long.dir/srcs/update.c.o" \
+"CMakeFiles/so_long.dir/libs/minilibx_macos/font.c.o" \
+"CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_png.c.o" \
+"CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_rgb.c.o" \
+"CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_string_put.c.o" \
+"CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_xpm.c.o"
 
 # External object files for target so_long
 so_long_EXTERNAL_OBJECTS =
@@ -999,12 +1055,16 @@ so_long: CMakeFiles/so_long.dir/srcs/end_game.c.o
 so_long: CMakeFiles/so_long.dir/srcs/game_start.c.o
 so_long: CMakeFiles/so_long.dir/srcs/input.c.o
 so_long: CMakeFiles/so_long.dir/srcs/more_open_images.c.o
-so_long: CMakeFiles/so_long.dir/srcs/movement.c.o
 so_long: CMakeFiles/so_long.dir/srcs/open_images.c.o
 so_long: CMakeFiles/so_long.dir/srcs/update.c.o
+so_long: CMakeFiles/so_long.dir/libs/minilibx_macos/font.c.o
+so_long: CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_png.c.o
+so_long: CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_rgb.c.o
+so_long: CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_string_put.c.o
+so_long: CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_xpm.c.o
 so_long: CMakeFiles/so_long.dir/build.make
 so_long: CMakeFiles/so_long.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/nephilister/prjcs/newloong/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Linking C executable so_long"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/nephilister/prjcs/newloong/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Linking C executable so_long"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/so_long.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

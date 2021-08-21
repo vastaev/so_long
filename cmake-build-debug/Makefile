@@ -1329,6 +1329,126 @@ libs/libft/srcs/get_next_line_utils.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/libs/libft/srcs/get_next_line_utils.c.s
 .PHONY : libs/libft/srcs/get_next_line_utils.c.s
 
+libs/minilibx_macos/font.o: libs/minilibx_macos/font.c.o
+.PHONY : libs/minilibx_macos/font.o
+
+# target to build an object file
+libs/minilibx_macos/font.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/libs/minilibx_macos/font.c.o
+.PHONY : libs/minilibx_macos/font.c.o
+
+libs/minilibx_macos/font.i: libs/minilibx_macos/font.c.i
+.PHONY : libs/minilibx_macos/font.i
+
+# target to preprocess a source file
+libs/minilibx_macos/font.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/libs/minilibx_macos/font.c.i
+.PHONY : libs/minilibx_macos/font.c.i
+
+libs/minilibx_macos/font.s: libs/minilibx_macos/font.c.s
+.PHONY : libs/minilibx_macos/font.s
+
+# target to generate assembly for a file
+libs/minilibx_macos/font.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/libs/minilibx_macos/font.c.s
+.PHONY : libs/minilibx_macos/font.c.s
+
+libs/minilibx_macos/mlx_png.o: libs/minilibx_macos/mlx_png.c.o
+.PHONY : libs/minilibx_macos/mlx_png.o
+
+# target to build an object file
+libs/minilibx_macos/mlx_png.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_png.c.o
+.PHONY : libs/minilibx_macos/mlx_png.c.o
+
+libs/minilibx_macos/mlx_png.i: libs/minilibx_macos/mlx_png.c.i
+.PHONY : libs/minilibx_macos/mlx_png.i
+
+# target to preprocess a source file
+libs/minilibx_macos/mlx_png.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_png.c.i
+.PHONY : libs/minilibx_macos/mlx_png.c.i
+
+libs/minilibx_macos/mlx_png.s: libs/minilibx_macos/mlx_png.c.s
+.PHONY : libs/minilibx_macos/mlx_png.s
+
+# target to generate assembly for a file
+libs/minilibx_macos/mlx_png.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_png.c.s
+.PHONY : libs/minilibx_macos/mlx_png.c.s
+
+libs/minilibx_macos/mlx_rgb.o: libs/minilibx_macos/mlx_rgb.c.o
+.PHONY : libs/minilibx_macos/mlx_rgb.o
+
+# target to build an object file
+libs/minilibx_macos/mlx_rgb.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_rgb.c.o
+.PHONY : libs/minilibx_macos/mlx_rgb.c.o
+
+libs/minilibx_macos/mlx_rgb.i: libs/minilibx_macos/mlx_rgb.c.i
+.PHONY : libs/minilibx_macos/mlx_rgb.i
+
+# target to preprocess a source file
+libs/minilibx_macos/mlx_rgb.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_rgb.c.i
+.PHONY : libs/minilibx_macos/mlx_rgb.c.i
+
+libs/minilibx_macos/mlx_rgb.s: libs/minilibx_macos/mlx_rgb.c.s
+.PHONY : libs/minilibx_macos/mlx_rgb.s
+
+# target to generate assembly for a file
+libs/minilibx_macos/mlx_rgb.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_rgb.c.s
+.PHONY : libs/minilibx_macos/mlx_rgb.c.s
+
+libs/minilibx_macos/mlx_string_put.o: libs/minilibx_macos/mlx_string_put.c.o
+.PHONY : libs/minilibx_macos/mlx_string_put.o
+
+# target to build an object file
+libs/minilibx_macos/mlx_string_put.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_string_put.c.o
+.PHONY : libs/minilibx_macos/mlx_string_put.c.o
+
+libs/minilibx_macos/mlx_string_put.i: libs/minilibx_macos/mlx_string_put.c.i
+.PHONY : libs/minilibx_macos/mlx_string_put.i
+
+# target to preprocess a source file
+libs/minilibx_macos/mlx_string_put.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_string_put.c.i
+.PHONY : libs/minilibx_macos/mlx_string_put.c.i
+
+libs/minilibx_macos/mlx_string_put.s: libs/minilibx_macos/mlx_string_put.c.s
+.PHONY : libs/minilibx_macos/mlx_string_put.s
+
+# target to generate assembly for a file
+libs/minilibx_macos/mlx_string_put.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_string_put.c.s
+.PHONY : libs/minilibx_macos/mlx_string_put.c.s
+
+libs/minilibx_macos/mlx_xpm.o: libs/minilibx_macos/mlx_xpm.c.o
+.PHONY : libs/minilibx_macos/mlx_xpm.o
+
+# target to build an object file
+libs/minilibx_macos/mlx_xpm.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_xpm.c.o
+.PHONY : libs/minilibx_macos/mlx_xpm.c.o
+
+libs/minilibx_macos/mlx_xpm.i: libs/minilibx_macos/mlx_xpm.c.i
+.PHONY : libs/minilibx_macos/mlx_xpm.i
+
+# target to preprocess a source file
+libs/minilibx_macos/mlx_xpm.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_xpm.c.i
+.PHONY : libs/minilibx_macos/mlx_xpm.c.i
+
+libs/minilibx_macos/mlx_xpm.s: libs/minilibx_macos/mlx_xpm.c.s
+.PHONY : libs/minilibx_macos/mlx_xpm.s
+
+# target to generate assembly for a file
+libs/minilibx_macos/mlx_xpm.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/libs/minilibx_macos/mlx_xpm.c.s
+.PHONY : libs/minilibx_macos/mlx_xpm.c.s
+
 srcs/drawing.o: srcs/drawing.c.o
 .PHONY : srcs/drawing.o
 
@@ -1520,30 +1640,6 @@ srcs/more_open_images.s: srcs/more_open_images.c.s
 srcs/more_open_images.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/more_open_images.c.s
 .PHONY : srcs/more_open_images.c.s
-
-srcs/movement.o: srcs/movement.c.o
-.PHONY : srcs/movement.o
-
-# target to build an object file
-srcs/movement.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/movement.c.o
-.PHONY : srcs/movement.c.o
-
-srcs/movement.i: srcs/movement.c.i
-.PHONY : srcs/movement.i
-
-# target to preprocess a source file
-srcs/movement.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/movement.c.i
-.PHONY : srcs/movement.c.i
-
-srcs/movement.s: srcs/movement.c.s
-.PHONY : srcs/movement.s
-
-# target to generate assembly for a file
-srcs/movement.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/movement.c.s
-.PHONY : srcs/movement.c.s
 
 srcs/open_images.o: srcs/open_images.c.o
 .PHONY : srcs/open_images.o
@@ -1776,6 +1872,21 @@ help:
 	@echo "... libs/libft/srcs/get_next_line_utils.o"
 	@echo "... libs/libft/srcs/get_next_line_utils.i"
 	@echo "... libs/libft/srcs/get_next_line_utils.s"
+	@echo "... libs/minilibx_macos/font.o"
+	@echo "... libs/minilibx_macos/font.i"
+	@echo "... libs/minilibx_macos/font.s"
+	@echo "... libs/minilibx_macos/mlx_png.o"
+	@echo "... libs/minilibx_macos/mlx_png.i"
+	@echo "... libs/minilibx_macos/mlx_png.s"
+	@echo "... libs/minilibx_macos/mlx_rgb.o"
+	@echo "... libs/minilibx_macos/mlx_rgb.i"
+	@echo "... libs/minilibx_macos/mlx_rgb.s"
+	@echo "... libs/minilibx_macos/mlx_string_put.o"
+	@echo "... libs/minilibx_macos/mlx_string_put.i"
+	@echo "... libs/minilibx_macos/mlx_string_put.s"
+	@echo "... libs/minilibx_macos/mlx_xpm.o"
+	@echo "... libs/minilibx_macos/mlx_xpm.i"
+	@echo "... libs/minilibx_macos/mlx_xpm.s"
 	@echo "... srcs/drawing.o"
 	@echo "... srcs/drawing.i"
 	@echo "... srcs/drawing.s"
@@ -1800,9 +1911,6 @@ help:
 	@echo "... srcs/more_open_images.o"
 	@echo "... srcs/more_open_images.i"
 	@echo "... srcs/more_open_images.s"
-	@echo "... srcs/movement.o"
-	@echo "... srcs/movement.i"
-	@echo "... srcs/movement.s"
 	@echo "... srcs/open_images.o"
 	@echo "... srcs/open_images.i"
 	@echo "... srcs/open_images.s"

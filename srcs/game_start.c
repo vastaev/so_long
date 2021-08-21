@@ -90,7 +90,7 @@ void	game_init(t_game *game)
 {
 	game->mlx = mlx_init();
 	game->window = mlx_new_window(game->mlx,
-			game->wndw_size.x + IMG_SIZE / 2,
+			game->wndw_size.x + IMG_SIZE / 2 - 20,
 			game->wndw_size.y,
 			"soooo_long");
 	mlx_hook(game->window, 17, 0, end_program, (void *)game);
@@ -101,7 +101,6 @@ void	start_game(t_infoVars data, t_game *game)
 {
 	game->moves = 0;
 	game->collects = data.legC;
-	printf("%i", game->collects);
 	game->cellmap = make_cellmap(data, game);
 	game_init(game);
 }

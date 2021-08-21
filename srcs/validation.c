@@ -1,5 +1,22 @@
 #include "so_long.h"
 
+static int count_legens(int *legP, int *legE, char leg, t_infoVars *data)
+{
+	if (leg == '0' || leg == '1')
+		return (1);
+	else if (leg == 'P')
+		*legP = *legP + 1;
+	else if (leg == 'C')
+		data->legC++;
+	else if (leg == 'E')
+		*legE = *legE + 1;
+	else if (leg == '\n')
+		data->numNL++;
+	else
+		return (0);
+	return (1);
+}
+
 static void	legend_validation(int argc, char *argv[], t_infoVars *data)
 {
 	char 		buf[2];
@@ -17,14 +34,8 @@ static void	legend_validation(int argc, char *argv[], t_infoVars *data)
 	while (read(mapFd, buf, 1) != 0)
 	{
 		buf[1] = '\0';
-		if (buf[0] == 'P')
-			legP++;
-		if (buf[0] == 'C')
-			data->legC++;
-		if (buf[0] == 'E')
-			legE++;
-		if (buf[0] == '\n')
-			data->numNL++;
+		if (count_legens(&legP, &legE, buf[0], data) == 0)
+			error_exit("Wrong legend format");
 	}
 	if (legP != 1 || data->legC < 1 || legE < 1)
 		error_exit("Wrong map format");
@@ -92,6 +103,7 @@ void	map_validation(int argc, char *argv[], t_infoVars *data)
 	i = 0;
 	while (get_next_line(mapFd, &data->map[i]))
 		i++;
+	
 	rectangle_map_check(data);
 	map_walls_check(data);
 }

@@ -64,7 +64,7 @@ all : $(NAME)
 
 $(NAME) : $(LIBFT) $(OBJS_DIR) $(OBJS)
 	@$(CC) $(OBJS) $(LIBRARIES) $(INCLUDES) -o $(NAME)
-	@echo "$(NAME): $(BLUE)$(NAME) object files were created$(RESET)"
+	@echo "$(NAME): $(BLUE)object files were created$(RESET)"
 	@echo "$(NAME): $(GREEN)$(NAME) was created$(RESET)"
 
 $(OBJS_DIR)%.o : $(SRCS_DIR)%.c
