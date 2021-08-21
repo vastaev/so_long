@@ -6,7 +6,7 @@ t_cell **memalloc_cellmap(t_infoVars data, t_cell **cellmap)
 	int	lineLen;
 
 	i = 0;
-	cellmap = malloc(sizeof(t_cell *) * data.numNL + 1);
+	cellmap = malloc(sizeof(t_cell *) * (data.numNL + 2));
 	if (cellmap == NULL)
 		error_free_matrix("Malloc error when making cellmap", data.map);
 	lineLen = (int)ft_strlen(data.map[0]);

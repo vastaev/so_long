@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nephilister <nephilister@student.42.fr>    +#+  +:+       +#+         #
+#    By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/21 12:30:03 by cjoanne           #+#    #+#              #
-#    Updated: 2021/08/19 02:06:08 by nephilister      ###   ########.fr        #
+#    Updated: 2021/08/21 04:27:18 by cjoanne          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 

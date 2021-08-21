@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   drawing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nephilister <nephilister@student.42.fr>    +#+  +:+       +#+        */
+/*   By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 02:53:22 by nephilister       #+#    #+#             */
-/*   Updated: 2021/08/19 05:01:14 by nephilister      ###   ########.fr       */
+/*   Updated: 2021/08/21 04:31:31 by cjoanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 static void	draw_image(t_cell cell, t_game game, t_vector pos)
 {
-	if (cell.type == EMPTY)
-		mlx_put_image_to_window(game.mlx, game.window,
-			game.empty_img, pos.x, pos.y);
-	else if  (cell.type == WALL)
+	if  (cell.type == WALL)
 		mlx_put_image_to_window(game.mlx, game.window,
 			game.wall_imgs.wall, pos.x, pos.y);
+	else if (cell.type == EMPTY)
+		mlx_put_image_to_window(game.mlx, game.window,
+			game.empty_img, pos.x, pos.y);
 	else if (cell.type == PLAYER)
 		mlx_put_image_to_window(game.mlx, game.window,
 			game.player.current_img, pos.x, pos.y);
