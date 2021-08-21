@@ -6,7 +6,7 @@
 /*   By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 02:53:22 by nephilister       #+#    #+#             */
-/*   Updated: 2021/08/21 04:31:31 by cjoanne          ###   ########.fr       */
+/*   Updated: 2021/08/21 04:48:06 by cjoanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	draw_image(t_cell cell, t_game game, t_vector pos)
 {
-	if  (cell.type == WALL)
+	if (cell.type == WALL)
 		mlx_put_image_to_window(game.mlx, game.window,
 			game.wall_imgs.wall, pos.x, pos.y);
 	else if (cell.type == EMPTY)
@@ -39,7 +39,7 @@ void	graphics(t_game game)
 
 	mlx_clear_window(game.mlx, game.window);
 	y = 0;
-	while(game.cellmap[y] != NULL)
+	while (game.cellmap[y] != NULL)
 	{
 		x = 0;
 		while (game.cellmap[y][x].type != 0)

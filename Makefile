@@ -6,7 +6,7 @@
 #    By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/21 12:30:03 by cjoanne           #+#    #+#              #
-#    Updated: 2021/08/21 04:27:18 by cjoanne          ###   ########.fr        #
+#    Updated: 2021/08/21 05:08:55 by cjoanne          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ SRCS_LIST	=	main.c\
 				drawing.c\
 				open_images.c\
 				more_open_images.c\
-				input.c
+				input.c\
+				generate_cellmap.c
 SRCS_DIR	=	srcs/
 SRCS		=	$(addprefix $(SRCS_DIR), $(SRCS_LIST))
 
@@ -58,11 +59,14 @@ GREEN = \033[0;32m
 BLUE= \033[0;34m
 RED = \033[0;31m
 RESET = \033[0m
+
+
 LIBA = libft.a
+MLXLIB = libmlx.a
 
 all : $(NAME)
 
-$(NAME) : $(LIBFT) $(OBJS_DIR) $(OBJS)
+$(NAME) : $(LIBFT) $(MINILIBX) $(OBJS_DIR) $(OBJS)
 	@$(CC) $(OBJS) $(LIBRARIES) $(INCLUDES) -o $(NAME)
 	@echo "$(NAME): $(BLUE)object files were created$(RESET)"
 	@echo "$(NAME): $(GREEN)$(NAME) was created$(RESET)"
@@ -78,9 +82,14 @@ $(LIBFT) :
 	@echo "$(NAME): $(BLUE)creating $(LIBA)$(RESET)"
 	@$(MAKE) -C $(LIBFT_DIR)
 
+$(MINILIBX) :
+	@echo "$(NAME): $(BLUE)creating $(MLXLIB)$(RESET)"
+	@$(MAKE) -C $(MINILIBX_DIR)
+
 clean :
 	@$(RM) $(OBJS_DIR)
 	@$(MAKE) clean -C $(LIBFT_DIR)
+	@$(MAKE) clean -C $(MINILIBX_DIR)
 	@echo "$(NAME): $(RED)object files were deleted$(RESET)"
 
 fclean : clean
@@ -88,6 +97,8 @@ fclean : clean
 	@echo "$(NAME): $(RED)$(NAME) was deleted$(RESET)"
 	@$(RM) $(LIBFT)
 	@echo "$(NAME): $(RED)$(LIBA) was deleted$(RESET)"
+	@echo "$(NAME): $(RED)$(MLXLIB) was deleted$(RESET)"
+
 
 re : fclean all
 

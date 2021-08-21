@@ -1,5 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   so_long.h                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/08/21 04:59:52 by cjoanne           #+#    #+#             */
+/*   Updated: 2021/08/21 04:59:53 by cjoanne          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SO_LONG_H
-#define SO_LONG_H
+# define SO_LONG_H
 
 # include <fcntl.h>
 # include <unistd.h>
@@ -18,15 +30,15 @@ typedef struct s_infoVars
 	int		numNL;
 	int		legC;
 	char	**map;
-} t_infoVars;
+}				t_infoVars;
 
-typedef struct	s_vector
+typedef struct s_vector
 {
 	int	x;
 	int	y;
 }				t_vector;
 
-typedef struct	s_image {
+typedef struct s_image {
 	void		*reference;
 	t_vector	size;
 	char		*pixels;
@@ -54,7 +66,7 @@ enum e_keycode
 	ESC = 53
 };
 
-typedef struct	s_cell
+typedef struct s_cell
 {
 	t_celltype		type;
 	t_vector		position;
@@ -70,12 +82,12 @@ typedef struct s_player
 	void	*current_img;
 }				t_player;
 
-typedef struct	s_wall_img
+typedef struct s_wall_img
 {
 	void	*wall;
 }				t_wall_img;
 
-typedef struct	s_collectable_img
+typedef struct s_collectable_img
 {
 	void	*current_img;
 }	t_collect_img;
@@ -97,7 +109,6 @@ typedef struct s_game
 	void			*exit_img;
 }	t_game;
 
-
 void		errno_exit(void);
 void		error_exit(char *error);
 
@@ -106,14 +117,15 @@ void		error_free_matrix(char *error, char **matrix);
 
 void		map_validation(int argc, char *argv[], t_infoVars *data);
 
-t_image 	ft_new_sprite(void *mlx, char *path);
+t_image		ft_new_sprite(void *mlx, char *path);
 
-void	start_game(t_infoVars data, t_game *game);
-int		end_program(t_game *game);
-void	open_images(t_game *game);
-void	graphics(t_game game);
-int		ft_update(t_game *game);
-int		ft_input(int key, t_game *game);
-void	open_exit_img(t_game *game);
+void		start_game(t_infoVars data, t_game *game);
+int			end_program(t_game *game);
+void		open_images(t_game *game);
+void		graphics(t_game game);
+int			ft_update(t_game *game);
+int			ft_input(int key, t_game *game);
+void		open_exit_img(t_game *game);
+t_cell		**make_cellmap(t_infoVars data, t_game *game);
 
 #endif

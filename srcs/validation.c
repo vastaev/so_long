@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   validation.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/08/21 04:47:19 by cjoanne           #+#    #+#             */
+/*   Updated: 2021/08/21 04:56:03 by cjoanne          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "so_long.h"
 
-static int count_legens(int *legP, int *legE, char leg, t_infoVars *data)
+static int	count_legens(int *legP, int *legE, char leg, t_infoVars *data)
 {
 	if (leg == '0' || leg == '1')
 		return (1);
@@ -19,7 +31,7 @@ static int count_legens(int *legP, int *legE, char leg, t_infoVars *data)
 
 static void	legend_validation(int argc, char *argv[], t_infoVars *data)
 {
-	char 		buf[2];
+	char		buf[2];
 	int			legP;
 	int			legE;
 	int			mapFd;
@@ -82,7 +94,7 @@ static void	map_walls_check(t_infoVars *data)
 
 void	map_validation(int argc, char *argv[], t_infoVars *data)
 {
-	int 	mapNameLen;
+	int		mapNameLen;
 	int		mapInd;
 	int		mapFd;
 	int		i;
@@ -103,7 +115,6 @@ void	map_validation(int argc, char *argv[], t_infoVars *data)
 	i = 0;
 	while (get_next_line(mapFd, &data->map[i]))
 		i++;
-	
 	rectangle_map_check(data);
 	map_walls_check(data);
 }
