@@ -6,11 +6,27 @@
 /*   By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 02:53:22 by nephilister       #+#    #+#             */
-/*   Updated: 2021/08/21 04:48:06 by cjoanne          ###   ########.fr       */
+/*   Updated: 2021/08/21 06:20:21 by cjoanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+
+static void	draw_text(t_game game)
+{
+	char	*str;
+
+	mlx_string_put(game.mlx, game.window,
+		game.wndw_size.x - IMG_SIZE / 2.3 - 50,
+		IMG_SIZE - IMG_SIZE / 1.5,
+		-1, "steps: ");
+	str = ft_itoa(game.moves);
+	mlx_string_put(game.mlx, game.window,
+		game.wndw_size.x - IMG_SIZE / 2.3 - 5,
+		IMG_SIZE - IMG_SIZE / 1.5,
+		-1, str);
+	free(str);
+}
 
 static void	draw_image(t_cell cell, t_game game, t_vector pos)
 {
@@ -50,4 +66,5 @@ void	graphics(t_game game)
 		}
 		y++;
 	}
+	draw_text(game);
 }
