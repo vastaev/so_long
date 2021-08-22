@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   drawing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nephilister <nephilister@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 02:53:22 by nephilister       #+#    #+#             */
-/*   Updated: 2021/08/21 06:20:21 by cjoanne          ###   ########.fr       */
+/*   Updated: 2021/08/22 09:35:39 by nephilister      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,9 @@ static void	draw_image(t_cell cell, t_game game, t_vector pos)
 	else if (cell.type == EXIT)
 		mlx_put_image_to_window(game.mlx, game.window,
 			game.exit_img, pos.x, pos.y);
+	else if (cell.type == HOR_ENEMY || cell.type == VER_ENEMY)
+		mlx_put_image_to_window(game.mlx, game.window,
+			game.enemyImg.img, pos.x, pos.y);
 }
 
 void	graphics(t_game game)

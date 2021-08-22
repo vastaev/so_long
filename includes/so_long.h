@@ -6,7 +6,7 @@
 /*   By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 04:59:52 by cjoanne           #+#    #+#             */
-/*   Updated: 2021/08/21 04:59:53 by cjoanne          ###   ########.fr       */
+/*   Updated: 2021/08/22 13:47:50 by cjoanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 # include "mlx.h"
 # include <stdbool.h>
 
-# define IMG_SIZE 50
+# define IMG_SIZE 64
 
 typedef struct s_infoVars
 {
@@ -54,7 +54,8 @@ typedef enum e_celltype
 	COLLECTABLE = 'C',
 	PLAYER = 'P',
 	EXIT = 'E',
-	ENEMY = 'V',
+	HOR_ENEMY = 'H',
+	VER_ENEMY = 'V'
 }	t_celltype;
 
 enum e_keycode
@@ -92,6 +93,20 @@ typedef struct s_collectable_img
 	void	*current_img;
 }	t_collect_img;
 
+typedef struct s_enemy
+{
+	t_cell			*cell;
+	t_celltype		eType;
+	int				direction;
+	struct s_enemy	*next;
+}	t_enemy;
+
+typedef struct s_enemy_imgs
+{
+	int		anim;
+	void	*img;
+}	t_enemy_img;
+
 typedef struct s_game
 {
 	void			*mlx;
@@ -102,6 +117,8 @@ typedef struct s_game
 	int				og_collects;
 	int				collects;
 	int				moves;
+	t_enemy			*enemyList;
+	t_enemy_img		enemyImg;
 	t_vector		img_size;
 	t_wall_img		wall_imgs;
 	t_collect_img	collects_imgs;
@@ -127,5 +144,10 @@ int			ft_update(t_game *game);
 int			ft_input(int key, t_game *game);
 void		open_exit_img(t_game *game);
 t_cell		**make_cellmap(t_infoVars data, t_game *game);
+
+void		add_enemy(t_game *game, t_enemy *enemy);
+t_enemy		*create_enemy(t_celltype type, t_cell *cell);
+void		move_enemies(t_game *game);
+void		open_enemy_img(t_game *game);
 
 #endif

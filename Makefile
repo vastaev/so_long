@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+         #
+#    By: nephilister <nephilister@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/21 12:30:03 by cjoanne           #+#    #+#              #
-#    Updated: 2021/08/21 05:08:55 by cjoanne          ###   ########.fr        #
+#    Updated: 2021/08/22 10:31:43 by nephilister      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,9 @@ SRCS_LIST	=	main.c\
 				open_images.c\
 				more_open_images.c\
 				input.c\
-				generate_cellmap.c
+				generate_cellmap.c\
+				enemy_list.c\
+				enemy_behavior.c
 SRCS_DIR	=	srcs/
 SRCS		=	$(addprefix $(SRCS_DIR), $(SRCS_LIST))
 
@@ -72,7 +74,7 @@ $(NAME) : $(LIBFT) $(MINILIBX) $(OBJS_DIR) $(OBJS)
 	@echo "$(NAME): $(GREEN)$(NAME) was created$(RESET)"
 
 $(OBJS_DIR)%.o : $(SRCS_DIR)%.c
-	@$(CC) $(СFLAGS) $(INCLUDES) -c $< -o $@
+	@$(CC) -g $(СFLAGS) $(INCLUDES) -c $< -o $@
 	
 $(OBJS_DIR) :
 	@mkdir -p $(OBJS_DIR)

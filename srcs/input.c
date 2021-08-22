@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   input.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nephilister <nephilister@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 04:47:09 by cjoanne           #+#    #+#             */
-/*   Updated: 2021/08/21 04:47:10 by cjoanne          ###   ########.fr       */
+/*   Updated: 2021/08/22 11:39:41 by nephilister      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ void	move_to_collectable(t_game *game, t_cell *cell)
 	game->collects--;
 }
 
-void	move_to_exit(t_game *game, t_cell *cell)
+void	move_to_end(t_game *game, t_cell *cell, char *msg)
 {
-	printf("VICTORY!\n");
+	printf("%s\n", msg);
 	end_program(game);
 }
 
@@ -41,9 +41,12 @@ bool	move_to(t_game *game, t_cell *cell)
 	else if (cell->type == COLLECTABLE)
 		move_to_collectable(game, cell);
 	else if (cell->type == EXIT && game->collects == 0)
-		move_to_exit(game, cell);
+		move_to_end(game, cell, "VICTORY");
+	else if (cell->type == VER_ENEMY || cell->type == HOR_ENEMY)
+		move_to_end(game, cell, "lol you died");
 	else
 		return (false);
+	move_enemies(game);
 	return (true);
 }
 

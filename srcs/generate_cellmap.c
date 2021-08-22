@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   generate_cellmap.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nephilister <nephilister@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 05:00:44 by cjoanne           #+#    #+#             */
-/*   Updated: 2021/08/21 05:00:45 by cjoanne          ###   ########.fr       */
+/*   Updated: 2021/08/22 10:01:32 by nephilister      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,10 @@ static t_celltype	get_type(char legend)
 		return (PLAYER);
 	if (legend == EXIT)
 		return (EXIT);
-	if (legend == ENEMY)
-		return (ENEMY);
+	if (legend == HOR_ENEMY)
+		return (HOR_ENEMY);
+	if (legend == VER_ENEMY)
+		return (VER_ENEMY);
 	return (EMPTY);
 }
 
@@ -68,6 +70,8 @@ void	set_game_vars(t_cell *cell, t_game *game)
 {
 	if (cell->type == PLAYER)
 		game->player.cell = cell;
+	else if (cell->type == VER_ENEMY || cell->type == HOR_ENEMY)
+		add_enemy(game, create_enemy(cell->type, cell));
 }
 
 t_cell	**make_cellmap(t_infoVars data, t_game *game)
