@@ -6,7 +6,7 @@
 /*   By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 04:47:15 by cjoanne           #+#    #+#             */
-/*   Updated: 2021/08/22 13:57:22 by cjoanne          ###   ########.fr       */
+/*   Updated: 2021/08/22 16:24:25 by cjoanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 
 static void	open_player_img(t_game *game)
 {
-	game->player.current_img = mlx_xpm_file_to_image(game->mlx,
+	game->player.defaultImg = mlx_xpm_file_to_image(game->mlx,
 			"imgs/djenia.xpm", &game->img_size.x, &game->img_size.y);
+	game->player.reverseImg = mlx_xpm_file_to_image(game->mlx,
+			"imgs/reverse_jenia.xpm", &game->img_size.x, &game->img_size.y);
+	game->player.current_img = game->player.defaultImg;
 }
 
 static void	open_wall_img(t_game *game)

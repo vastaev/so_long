@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   game_start.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nephilister <nephilister@student.42.fr>    +#+  +:+       +#+        */
+/*   By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 04:47:07 by cjoanne           #+#    #+#             */
-/*   Updated: 2021/08/22 10:15:15 by nephilister      ###   ########.fr       */
+/*   Updated: 2021/08/24 18:42:40 by cjoanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,18 @@ static void	game_init(t_game *game)
 	open_images(game);
 }
 
+static void	anim_setup(t_game *game)
+{
+	game->player.frames = 25;
+	game->player.frameCount = 0;
+}
+
 void	start_game(t_infoVars data, t_game *game)
 {
 	game->moves = 0;
 	game->collects = data.legC;
 	game->enemyList = NULL;
 	game->cellmap = make_cellmap(data, game);
+	anim_setup(game);
 	game_init(game);
 }

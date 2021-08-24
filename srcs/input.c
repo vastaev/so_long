@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   input.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nephilister <nephilister@student.42.fr>    +#+  +:+       +#+        */
+/*   By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 04:47:09 by cjoanne           #+#    #+#             */
-/*   Updated: 2021/08/22 11:39:41 by nephilister      ###   ########.fr       */
+/*   Updated: 2021/08/24 18:41:17 by cjoanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ bool	move_to(t_game *game, t_cell *cell)
 	else if (cell->type == COLLECTABLE)
 		move_to_collectable(game, cell);
 	else if (cell->type == EXIT && game->collects == 0)
-		move_to_end(game, cell, "VICTORY");
+		move_to_end(game, cell, "Свобода?");
 	else if (cell->type == VER_ENEMY || cell->type == HOR_ENEMY)
-		move_to_end(game, cell, "lol you died");
+		move_to_end(game, cell, "Здравствуй небо в облаках!");
 	else
 		return (false);
 	move_enemies(game);

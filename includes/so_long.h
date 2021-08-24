@@ -6,7 +6,7 @@
 /*   By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 04:59:52 by cjoanne           #+#    #+#             */
-/*   Updated: 2021/08/22 13:47:50 by cjoanne          ###   ########.fr       */
+/*   Updated: 2021/08/24 16:50:29 by cjoanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,11 @@ typedef struct s_cell
 typedef struct s_player
 {
 	t_cell	*cell;
+	int		frames;
+	int		frameCount;
 	void	*current_img;
+	void	*defaultImg;
+	void	*reverseImg;
 }				t_player;
 
 typedef struct s_wall_img
@@ -105,6 +109,8 @@ typedef struct s_enemy_imgs
 {
 	int		anim;
 	void	*img;
+	void	*left;
+	void	*right;
 }	t_enemy_img;
 
 typedef struct s_game
@@ -124,6 +130,7 @@ typedef struct s_game
 	t_collect_img	collects_imgs;
 	void			*empty_img;
 	void			*exit_img;
+	void			*open_exit_img;
 }	t_game;
 
 void		errno_exit(void);
