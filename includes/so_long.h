@@ -6,7 +6,7 @@
 /*   By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 04:59:52 by cjoanne           #+#    #+#             */
-/*   Updated: 2021/08/24 16:50:29 by cjoanne          ###   ########.fr       */
+/*   Updated: 2021/08/24 19:22:39 by cjoanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,6 +138,7 @@ void		error_exit(char *error);
 
 void		free_cellmap(t_game *game);
 void		error_free_matrix(char *error, char **matrix);
+void		free_enemies(t_game *game);
 
 void		map_validation(int argc, char *argv[], t_infoVars *data);
 

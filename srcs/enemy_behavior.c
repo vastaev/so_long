@@ -6,7 +6,7 @@
 /*   By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 06:21:28 by cjoanne           #+#    #+#             */
-/*   Updated: 2021/08/24 18:40:26 by cjoanne          ###   ########.fr       */
+/*   Updated: 2021/08/24 19:27:57 by cjoanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static void	move_hor(t_enemy *enemy, t_game *game)
 			move_enemy_to(enemy, enemy->cell->left);
 		else if (enemy->cell->left->type == PLAYER)
 		{
-			printf("lol you died");
+			printf("Теперь солдат...\n");
 			end_program(game);
 		}
 		else
@@ -47,7 +47,7 @@ static void	move_hor(t_enemy *enemy, t_game *game)
 			move_enemy_to(enemy, enemy->cell->right);
 		else if (enemy->cell->right->type == PLAYER)
 		{
-			printf("lol you died");
+			printf("Здравствуй юность в сапогах!\n");
 			end_program(game);
 		}
 		else
@@ -63,7 +63,7 @@ static void	move_ver(t_enemy *enemy, t_game *game)
 			move_enemy_to(enemy, enemy->cell->up);
 		else if (enemy->cell->up->type == PLAYER)
 		{
-			printf("lol you died");
+			printf("Годик не так много...\n");
 			end_program(game);
 		}
 		else
@@ -75,7 +75,7 @@ static void	move_ver(t_enemy *enemy, t_game *game)
 			move_enemy_to(enemy, enemy->cell->down);
 		else if (enemy->cell->down->type == PLAYER)
 		{
-			printf("lol you died");
+			printf("В армии тоже неплохо\n");
 			end_program(game);
 		}
 		else
@@ -92,9 +92,9 @@ void	move_enemies(t_game *game)
 	ptr = game->enemyList;
 	while (1)
 	{
-		if (game->enemyList->eType == HOR_ENEMY)
+		if (ptr->eType == HOR_ENEMY)
 			move_hor(ptr, game);
-		else if (game->enemyList->eType == VER_ENEMY)
+		else if (ptr->eType == VER_ENEMY)
 			move_ver(ptr, game);
 		if (ptr->next == NULL)
 			break ;
