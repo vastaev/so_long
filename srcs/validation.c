@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   validation.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nephilister <nephilister@student.42.fr>    +#+  +:+       +#+        */
+/*   By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 04:47:19 by cjoanne           #+#    #+#             */
-/*   Updated: 2021/08/22 10:18:53 by nephilister      ###   ########.fr       */
+/*   Updated: 2021/08/24 20:00:49 by cjoanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static void	rectangle_map_check(t_infoVars *data)
 	while (i <= data->numNL)
 	{
 		if (ft_strlen(data->map[i]) != firstLineLen)
-			error_exit("Not rectangle");
+			error_free_map(data, "Not rectangle");
 		i++;
 	}
 }
@@ -77,19 +77,19 @@ static void	map_walls_check(t_infoVars *data)
 	i = 0;
 	while (data->map[0][i] != '\0')
 		if (data->map[0][i++] != '1')
-			error_free_matrix("Wrong map format(hole in tWall)", data->map);
+			error_free_map(data, "Wrong map format(hole in tWall)");
 	i = 0;
 	while (data->map[data->numNL][i] != '\0')
 		if (data->map[data->numNL][i++] != '1')
-			error_free_matrix("Wrong map format(hole in bWall)", data->map);
+			error_free_map(data, "Wrong map format(hole in bWall)");
 	i = 1;
 	while (i < data->numNL)
 		if (data->map[i++][0] != '1')
-			error_free_matrix("Wrong map format(hole in lWall)", data->map);
+			error_free_map(data, "Wrong map format(hole in lWall)");
 	i = 1;
 	while (i < data->numNL)
 		if (data->map[i++][lineLen] != '1')
-			error_free_matrix("Wrong map format(hole in rWall)", data->map);
+			error_free_map(data, "Wrong map format(hole in rWall)");
 }
 
 void	map_validation(int argc, char *argv[], t_infoVars *data)

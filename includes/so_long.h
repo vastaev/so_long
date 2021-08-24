@@ -6,7 +6,7 @@
 /*   By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 04:59:52 by cjoanne           #+#    #+#             */
-/*   Updated: 2021/08/24 19:22:39 by cjoanne          ###   ########.fr       */
+/*   Updated: 2021/08/24 20:00:30 by cjoanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,10 +135,11 @@ typedef struct s_game
 
 void		errno_exit(void);
 void		error_exit(char *error);
+void		error_free_map(t_infoVars *data, char *error);
 
 void		free_cellmap(t_game *game);
-void		error_free_matrix(char *error, char **matrix);
 void		free_enemies(t_game *game);
+void		free_matrix(t_infoVars *data);
 
 void		map_validation(int argc, char *argv[], t_infoVars *data);
 

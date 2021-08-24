@@ -6,16 +6,24 @@
 /*   By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 04:47:05 by cjoanne           #+#    #+#             */
-/*   Updated: 2021/08/24 19:26:56 by cjoanne          ###   ########.fr       */
+/*   Updated: 2021/08/24 19:39:39 by cjoanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void	error_free_matrix(char *error, char **matrix)
+void	free_matrix(t_infoVars *data)
 {
-	ft_free_split(matrix);
-	error_exit(error);
+	int	i;
+
+	i = 0;
+	while (i < data->numNL)
+	{
+		data->map[i] = NULL;
+		free(data->map[i]);
+		i++;
+	}
+	data->map = NULL;
 }
 
 void	free_cellmap(t_game *game)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   generate_cellmap.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nephilister <nephilister@student.42.fr>    +#+  +:+       +#+        */
+/*   By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 05:00:44 by cjoanne           #+#    #+#             */
-/*   Updated: 2021/08/22 10:01:32 by nephilister      ###   ########.fr       */
+/*   Updated: 2021/08/24 20:02:54 by cjoanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static t_cell	**memalloc_cellmap(t_infoVars data, t_cell **cellmap)
 	i = 0;
 	cellmap = malloc(sizeof(t_cell *) * (data.numNL + 2));
 	if (cellmap == NULL)
-		error_free_matrix("Malloc error when making cellmap", data.map);
+		error_free_map(&data, "Malloc error when making cellmap");
 	lineLen = (int)ft_strlen(data.map[0]);
 	while (i <= data.numNL)
 	{
