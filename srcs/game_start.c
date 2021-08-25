@@ -6,7 +6,7 @@
 /*   By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 04:47:07 by cjoanne           #+#    #+#             */
-/*   Updated: 2021/08/24 18:42:40 by cjoanne          ###   ########.fr       */
+/*   Updated: 2021/08/25 15:29:48 by cjoanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void	start_game(t_infoVars data, t_game *game)
 	game->collects = data.legC;
 	game->enemyList = NULL;
 	game->cellmap = make_cellmap(data, game);
+	free_matrix(&data);
 	anim_setup(game);
 	game_init(game);
 }
