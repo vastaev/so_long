@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjoanne <cjoanne@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nephilister <nephilister@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 04:47:05 by cjoanne           #+#    #+#             */
-/*   Updated: 2021/08/24 19:39:39 by cjoanne          ###   ########.fr       */
+/*   Updated: 2021/08/26 15:37:54 by nephilister      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	free_matrix(t_infoVars *data)
 	i = 0;
 	while (i < data->numNL)
 	{
-		data->map[i] = NULL;
 		free(data->map[i]);
+		data->map[i] = NULL;
 		i++;
 	}
 	data->map = NULL;
